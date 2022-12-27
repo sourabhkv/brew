@@ -17,13 +17,13 @@ class Staff{
 	
 	void display() {
 		System.out.printf("\n%-15s", "StaffID");
-		System.out.printf("\n%-15s", StaffID);
+		System.out.printf("%-15s", StaffID);
 		System.out.printf("\n%-15s", "Name");
-		System.out.printf("\n%-15s", Name);
+		System.out.printf("%-15s", Name);
 		System.out.printf("\n%-15s", "Phone");
-		System.out.printf("\n%-15s", Phone);
+		System.out.printf("%-15s", Phone);
 		System.out.printf("\n%-15s", "Salary");
-		System.out.printf("\n%-15s", Salary);
+		System.out.printf("%-15s", Salary);
 	}
 }
 
@@ -40,9 +40,9 @@ class Teaching extends Staff{
 	void display() {
 		super.display();
 		System.out.printf("\n%-15s","Domain");
-		System.out.printf("\n%-15s",Domain);
+		System.out.printf("%-15s",Domain);
 		System.out.printf("\n%-15s","Publications");
-		System.out.printf("\n%-15s",Publication);
+		System.out.printf("%-15s",Publication);
 	}
 }
 
@@ -57,7 +57,7 @@ class Technical extends Staff{
 	void display() {
 		super.display();
 		System.out.printf("\n%-15s","Skills");
-		System.out.printf("\n%-15s", Skills);
+		System.out.printf("%-15s", Skills);
 	}
 }
 
@@ -72,7 +72,7 @@ class Contract extends Staff{
 	void display() {
 		super.display();
 		System.out.printf("\n%-15s","Period");
-		System.out.printf("\n%-15s", Period);
+		System.out.printf("%-15s", Period);
 	}
 }
 
