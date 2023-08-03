@@ -11,18 +11,29 @@ public class KnapsackGreedy2
     static int n;	// no. of objects
     static float M;	// capacity of Knapsack public static void main(String args[])
     {
-        Scanner scanner = new Scanner(System.in); System.out.println("Enter number of objects: "); n = scanner.nextInt();
-        KObject[] obj = new KObject[n]; for(int i = 0; i<n;i++)
+        Scanner scanner = new Scanner(System.in); 
+        System.out.println("Enter number of objects: ");
+        n = scanner.nextInt();
+        KObject[] obj = new KObject[n]; 
+        for(int i = 0; i<n;i++)
         obj[i] = new KObject();	// allocate memory for members ReadObjects(obj);
         Knapsack(obj); scanner.close();
     }
     static void ReadObjects(KObject obj[])
     {
         KObject temp = new KObject();
-        Scanner scanner = new Scanner(System.in); System.out.println("Enter the max capacity of knapsack: "); M = scanner.nextFloat();
-        System.out.println("Enter Weights: "); for (int i = 0; i < n; i++)
-        obj[i].w = scanner.nextFloat(); System.out.println("Enter Profits: "); for (int i = 0; i < n; i++)
-        obj[i].p = scanner.nextFloat(); for (int i = 0; i < n; i++)
+        Scanner scanner = new Scanner(System.in); 
+        System.out.println("Enter the max capacity of knapsack: ");
+         M = scanner.nextFloat();
+        System.out.println("Enter Weights: "); 
+        for (int i = 0; i < n; i++)
+        obj[i].w = scanner.nextFloat();
+         
+        System.out.println("Enter Profits: "); 
+         
+        for (int i = 0; i < n; i++)
+        obj[i].p = scanner.nextFloat(); 
+        for (int i = 0; i < n; i++)
         obj[i].r = obj[i].p / obj[i].w;
         // sort objects in descending order, based on p/w ratio for(int i = 0; i<n-1; i++)
         for(int j=0; j<n-1-i; j++)
