@@ -2,18 +2,24 @@ import java.util.Random;
 import java.util.Scanner;
 public class MergeSort2
 {
-    static final int MAX = 10005; static int[] a = new int[MAX];
+    static final int MAX = 10005; 
+    static int[] a = new int[MAX];
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter Max array size: "); int n = input.nextInt();
+        System.out.print("Enter Max array size: ");
+        int n = input.nextInt();
         Random random = new Random(); 
         System.out.println("Enter the array elements: "); 
         for (int i = 0; i < n; i++)
-        // a[i] = input.nextInt(); // for keyboard entry a[i] = random.nextInt(1000);	// generate random numbers long startTime = System.nanoTime();
+        // a[i] = input.nextInt(); 
+        // for keyboard entry a[i] = random.nextInt(1000);	
+        // generate random numbers 
+        long startTime = System.nanoTime();
         MergeSortAlgorithm(0, n - 1);
         long stopTime = System.nanoTime(); long elapsedTime = stopTime - startTime;
-        System.out.println("Time Complexity (ms) for n = " + n + " is : " + (double) elapsedTime / 1000000); System.out.println("Sorted Array (Merge Sort):");
+        System.out.println("Time Complexity (ms) for n = " + n + " is : " + (double) elapsedTime / 1000000);
+        System.out.println("Sorted Array (Merge Sort):");
         for (int i = 0; i < n; i++)
         System.out.print(a[i] + " "); input.close();
     }
@@ -23,7 +29,10 @@ public class MergeSort2
         int mid;
         if (low < high)
         {
-            mid = (low + high) / 2; MergeSortAlgorithm(low, mid); MergeSortAlgorithm(mid + 1, high); Merge(low, mid, high);
+            mid = (low + high) / 2; 
+            MergeSortAlgorithm(low, mid); 
+            MergeSortAlgorithm(mid + 1, high);
+            Merge(low, mid, high);
         }
     }
     public static void Merge(int low, int mid, int high)

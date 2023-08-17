@@ -35,7 +35,8 @@ public class KnapsackGreedy2
         obj[i].p = scanner.nextFloat(); 
         for (int i = 0; i < n; i++)
         obj[i].r = obj[i].p / obj[i].w;
-        // sort objects in descending order, based on p/w ratio for(int i = 0; i<n-1; i++)
+        // sort objects in descending order, based on p/w ratio 
+        for(int i = 0; i<n-1; i++)
         for(int j=0; j<n-1-i; j++)
         if(obj[j].r < obj[j+1].r)
         {
