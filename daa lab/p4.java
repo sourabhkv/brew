@@ -9,7 +9,9 @@ public class KnapsackGreedy2
 {
     static final int MAX = 20;	// max. no. of objects
     static int n;	// no. of objects
-    static float M;	// capacity of Knapsack public static void main(String args[])
+    static float M;	// capacity of Knapsack 
+
+public static void main(String args[])
     {
         Scanner scanner = new Scanner(System.in); 
         System.out.println("Enter number of objects: ");
