@@ -1,5 +1,5 @@
 import java.util.Scanner; 
-public class TravSalesPerson
+public class TravelSalesPerson
 {
     static int MAX = 100;
     static final int infinity = 999;
@@ -7,10 +7,15 @@ public class TravSalesPerson
     public static void main(String args[])
     {
         int cost = infinity;
-        int c[][] = new int[MAX][MAX];	// cost matrix int tour[] = new int[MAX];	// optimal tour int n;	// max. cities
+        int c[][] = new int[MAX][MAX];	// cost matrix 
+        int tour[] = new int[MAX];	// optimal tour 
+        int n;	// max. cities
         System.out.println("Travelling Salesman Problem using Dynamic Programming\n");
-        System.out.println("Enter number of cities: "); Scanner scanner = new Scanner(System.in);
-        n = scanner.nextInt(); System.out.println("Enter Cost matrix:\n"); for (int i = 0; i < n; i++)
+        System.out.println("Enter number of cities: "); 
+        Scanner scanner = new Scanner(System.in);
+        n = scanner.nextInt(); 
+        System.out.println("Enter Cost matrix:\n"); 
+        for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
         {
             c[i][j] = scanner.nextInt();
